@@ -1,11 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import BlueSection from './components/BluSection.vue'
+import AppLinks from './components/AppLinks.vue'
 
 export default {
   components: {
     AppHeader,
-    BlueSection
+    BlueSection,
+    AppLinks,
   }
 }
 </script>
@@ -16,6 +18,7 @@ export default {
     <h1>content goes here</h1>
   </main>
   <BlueSection />
+  <AppLinks />
 </template>
 
 <style lang="scss">
