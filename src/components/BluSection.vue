@@ -71,7 +71,7 @@ export default {
 
         .merch-img {
 
-            width: 50px;
+            width: 40px;
 
         }
 
