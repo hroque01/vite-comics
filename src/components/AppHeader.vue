@@ -92,9 +92,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
 }
 
 ul {
@@ -111,7 +109,6 @@ ul {
 
         &.active,
         &:hover {
-            padding-bottom: 70px;
             background: lighten($color: $secondary, $amount: 70%);
             border-bottom: 3px solid $secondary;
             color: $secondary;
