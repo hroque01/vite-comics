@@ -131,4 +131,16 @@ export default {
     top: -55px;
 
 }
+
+@media screen and (min-width: 1920px) {
+
+    .links {
+        .container {
+            display: flex;
+            margin: 0;
+            padding: 0 145px;
+
+        }
+    }
+}
 </style>
