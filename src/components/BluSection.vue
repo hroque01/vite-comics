@@ -6,7 +6,7 @@ export default {
         return {
             items: [
                 {
-                    img: "../assets/img/buy-comics-digital-comics.png",
+                    img: "/img/buy-comics-digital-comics.png",
                     text: "DIGITAL COMICS",
                     url: "#"
                 }
