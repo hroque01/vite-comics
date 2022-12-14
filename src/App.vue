@@ -1,13 +1,21 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import { def } from '@vue/shared';
+import AppHeader from './components/AppHeader.vue';
+
+export default {
+  components: {
+    AppHeader,
+  }
+}
 </script>
 
 <template>
+  <AppHeader />
 </template>
 
 <style lang="scss">
-@use './styles/partials/variables.scss' as *;
-@use './styles/general.scss' as *;
+@use './temp/partials/variables.scss' as *;
+@use './temp/general.scss' as *;
 
 h1,
 h2,
