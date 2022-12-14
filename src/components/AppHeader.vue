@@ -12,7 +12,7 @@ export default {
                 {
                     text: "COMICS",
                     url: '#',
-                    current: false,
+                    current: true,
                 },
                 {
                     text: "MOVIES",
@@ -68,9 +68,9 @@ export default {
         </a>
         <nav>
             <ul>
-                <li>
-                    <a class="active" href="#">
-                        CHARACTERS
+                <li v-for="(link, index) in links" :key="index">
+                    <a :class="{ active: link.current }" :href="link.url">
+                        {{ link.text }}
                     </a>
                 </li>
             </ul>
@@ -97,11 +97,11 @@ ul {
         padding: 1rem;
         text-decoration: none;
         font-weight: 600;
-        transition: background 0.3s;
 
         &.active,
         &:hover {
-            background-color: lighten($color: blue, $amount: 70%);
+            background: lighten($color: $secondary, $amount: 70%);
+            color: $secondary;
         }
     }
 }
