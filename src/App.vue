@@ -15,7 +15,7 @@ export default {
 <template>
   <AppHeader />
   <main>
-    <h1>content goes here</h1>
+    <h1> --> content goes here </h1>
   </main>
   <BlueSection />
   <AppLinks />
@@ -29,7 +29,8 @@ main {
   height: 200px;
   background: black;
 
-  main h1 {
+
+  h1 {
     color: white;
   }
 }
