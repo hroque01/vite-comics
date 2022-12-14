@@ -119,7 +119,7 @@ export default {
 
 .img-bg {
     position: absolute;
-    right: 0;
+    right: 100px;
     top: -55px;
 
 }
