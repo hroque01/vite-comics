@@ -107,10 +107,11 @@ ul {
         padding: 1rem;
         text-decoration: none;
         font-weight: 600;
-        height: 130px;
+
 
         &.active,
         &:hover {
+            padding-bottom: 70px;
             background: lighten($color: $secondary, $amount: 70%);
             border-bottom: 3px solid $secondary;
             color: $secondary;
