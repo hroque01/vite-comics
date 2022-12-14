@@ -92,7 +92,9 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 ul {
