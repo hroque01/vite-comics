@@ -41,9 +41,8 @@ export default {
 </script>
 
 <template>
-    <section class="links">
-        <div class="container links">
-
+    <section class="app-links">
+        <div class="links">
             <div class="title-links">
                 <h1>DC COMICS</h1>
                 <div class="arrays-link" v-for="comic in comics">
@@ -69,6 +68,9 @@ export default {
                 </div>
             </div>
 
+            <div class="img-bg">
+                <img src="/dc-logo-bg.png" alt="">
+            </div>
         </div>
     </section>
 </template>
@@ -77,19 +79,28 @@ export default {
 @use '../temp/partials/mixins.scss' as *;
 @use '../temp/partials/variables.scss' as *;
 
+.app-links {}
+
 .links {
     display: flex;
     margin: 0;
     background-image: url(img/footer-bg.jpg);
+    background-size: cover;
+    position: relative;
+
+    .link-parts {
+        display: flexs;
+    }
 
     .title-links {
         display: flex;
         flex-direction: column;
         margin-left: 50px;
         padding-bottom: 50px;
+        font-size: 16px;
 
         h1 {
-            padding-top: 50px;
+            padding-top: 30px;
             padding-bottom: 10px;
             color: white;
         }
@@ -104,5 +115,12 @@ export default {
             }
         }
     }
+}
+
+.img-bg {
+    position: absolute;
+    right: 0;
+    top: -55px;
+
 }
 </style>
