@@ -41,7 +41,20 @@ export default {
 </script>
 
 <template>
-
+    <section class="links">
+        <div class="unico">
+            <div>
+                comics
+                Shop
+            </div>
+            <div>
+                dc
+            </div>
+            <div>
+                sites
+            </div>
+        </div>
+    </section>
 </template>
 
 <style>
