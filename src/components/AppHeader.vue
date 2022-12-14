@@ -63,18 +63,23 @@ export default {
 <template>
 
     <header>
-        <a href="#">
-            <img src="/dc-logo.png" alt="">
-        </a>
-        <nav>
-            <ul>
-                <li v-for="(link, index) in links" :key="index">
-                    <a :class="{ active: link.current }" :href="link.url">
-                        {{ link.text }}
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="header-nav">
+                <a href="#">
+                    <img src="/dc-logo.png" alt="">
+                </a>
+                <nav>
+                    <ul>
+                        <li v-for="(link, index) in links" :key="index">
+                            <a :class="{ active: link.current }" :href="link.url">
+                                {{ link.text }}
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
     </header>
 
 </template>
@@ -83,8 +88,11 @@ export default {
 @use '../temp/partials/mixins.scss' as *;
 @use '../temp/partials/variables.scss' as *;
 
-header {
-    text-align: center;
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
 }
 
 ul {
@@ -97,10 +105,12 @@ ul {
         padding: 1rem;
         text-decoration: none;
         font-weight: 600;
+        height: 130px;
 
         &.active,
         &:hover {
             background: lighten($color: $secondary, $amount: 70%);
+            border-bottom: 3px solid $secondary;
             color: $secondary;
         }
     }
