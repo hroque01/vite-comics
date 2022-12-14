@@ -1,10 +1,11 @@
 <script>
-import { def } from '@vue/shared';
 import AppHeader from './components/AppHeader.vue';
+import BlueSection from './components/BluSection.vue'
 
 export default {
   components: {
     AppHeader,
+    BlueSection
   }
 }
 </script>
@@ -14,6 +15,7 @@ export default {
   <main>
     <h1>content goes here</h1>
   </main>
+  <BlueSection />
 </template>
 
 <style lang="scss">
