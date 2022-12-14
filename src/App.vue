@@ -2,12 +2,14 @@
 import AppHeader from './components/AppHeader.vue';
 import BlueSection from './components/BluSection.vue'
 import AppLinks from './components/AppLinks.vue'
+import AppFooter from './components/AppFooter.vue'
 
 export default {
   components: {
     AppHeader,
     BlueSection,
     AppLinks,
+    AppFooter
   }
 }
 </script>
@@ -19,6 +21,7 @@ export default {
   </main>
   <BlueSection />
   <AppLinks />
+  <AppFooter />
 </template>
 
 <style lang="scss">

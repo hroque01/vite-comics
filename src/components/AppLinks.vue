@@ -41,35 +41,37 @@ export default {
 </script>
 
 <template>
-    <section class="app-links">
+    <section>
         <div class="links">
-            <div class="title-links">
-                <h1>DC COMICS</h1>
-                <div class="arrays-link" v-for="comic in comics">
-                    <a href="#">{{ comic }}</a>
+            <div class="container">
+                <div class="title-links">
+                    <h1>DC COMICS</h1>
+                    <div class="arrays-link" v-for="comic in comics">
+                        <a href="#">{{ comic }}</a>
+                    </div>
+                    <h1>SHOP</h1>
+                    <div class="arrays-link" v-for="shop in shops">
+                        <a href="3">{{ shop }}</a>
+                    </div>
                 </div>
-                <h1>SHOP</h1>
-                <div class="arrays-link" v-for="shop in shops">
-                    <a href="3">{{ shop }}</a>
-                </div>
-            </div>
 
-            <div class="title-links">
-                <h1>DC</h1>
-                <div class="arrays-link" v-for="information in dc">
-                    <a href="#">{{ information }}</a>
+                <div class="title-links">
+                    <h1>DC</h1>
+                    <div class="arrays-link" v-for="information in dc">
+                        <a href="#">{{ information }}</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="title-links">
-                <h1>SITES</h1>
-                <div class="arrays-link" v-for="site in sites">
-                    <a href="#">{{ site }}</a>
+                <div class="title-links">
+                    <h1>SITES</h1>
+                    <div class="arrays-link" v-for="site in sites">
+                        <a href="#">{{ site }}</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="img-bg">
-                <img src="/dc-logo-bg.png" alt="">
+                <div class="img-bg">
+                    <img src="/dc-logo-bg.png" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -79,17 +81,23 @@ export default {
 @use '../temp/partials/mixins.scss' as *;
 @use '../temp/partials/variables.scss' as *;
 
-.app-links {}
-
 .links {
     display: flex;
     margin: 0;
     background-image: url(img/footer-bg.jpg);
     background-size: cover;
     position: relative;
+    overflow: hidden;
+
+    .container {
+        display: flex;
+        margin: 0;
+        padding: 0 10px;
+
+    }
 
     .link-parts {
-        display: flexs;
+        display: flex;
     }
 
     .title-links {
