@@ -42,21 +42,39 @@ export default {
 
 <template>
     <section class="links">
-        <div class="unico">
+        <div class="container links">
+
             <div>
-                comics
-                Shop
+                <h1>DC COMICS</h1>
+                <div v-for="comic in comics">
+                    <a href="#">{{ comic }}</a>
+                </div>
+                <h1>SHOP</h1>
+                <div v-for="shop in shops">
+                    <a href="3">{{ shop }}</a>
+                </div>
             </div>
             <div>
-                dc
+                <h1>DC</h1>
+                <div v-for="information in dc">
+                    <a href="#">{{ information }}</a>
+                </div>
             </div>
             <div>
-                sites
+                <h1>SITES</h1>
+                <div v-for="site in sites">
+                    <a href="#">{{ site }}</a>
+                </div>
             </div>
         </div>
     </section>
 </template>
 
-<style>
+<style lang="scss" scoped>
+@use '../temp/partials/mixins.scss' as *;
+@use '../temp/partials/variables.scss' as *;
 
+.links {
+    display: flex;
+}
 </style>
