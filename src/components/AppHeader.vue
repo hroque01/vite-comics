@@ -1,7 +1,61 @@
 <script>
 export default {
+    name: 'AppHeader',
     data() {
-        name: 'AppHeader'
+        return {
+            links: [
+                {
+                    text: "CHARACTERS",
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: "COMICS",
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: "MOVIES",
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: "TV",
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: "GAMES",
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: "COLLECTIBLES",
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: "VIDEOS",
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: "FANS",
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: "NEWS",
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: "SHOP",
+                    url: '#',
+                    current: false,
+                }
+            ]
+        }
     }
 }
 </script>
@@ -15,53 +69,8 @@ export default {
         <nav>
             <ul>
                 <li>
-                    <a href="#">
+                    <a class="active" href="#">
                         CHARACTERS
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        COMICS
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        MOVIES
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        TV
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        GAMES
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        COLLECTIBLES
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        VIDEOS
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        FANS
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        NEWS
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        SHOP
                     </a>
                 </li>
             </ul>
@@ -71,10 +80,29 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../temp/partials/mixins.scss';
-@use '../temp/partials/variables.scss';
+@use '../temp/partials/mixins.scss' as *;
+@use '../temp/partials/variables.scss' as *;
 
 header {
     text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin: 2.5 1rem 4rem;
+    @include center();
+
+    li a {
+        display: inline-block;
+        padding: 1rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s;
+
+        &.active,
+        &:hover {
+            background-color: lighten($color: blue, $amount: 70%);
+        }
+    }
 }
 </style>
