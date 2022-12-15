@@ -87,21 +87,73 @@ export default {
 </script>
 
 <template>
-    <section>
+    <section class="main">
+
         <div class="container">
+
+            <div class="title">
+                <h1>CURRENT SERIES</h1>
+            </div>
+
             <div class="cards">
                 <AppCard v-for="(product, index) in cards" :key="index" :thumb="product" />
             </div>
+
         </div>
+
+        <div class="d-flex">
+            <div class="button-load">
+                <h1>Load More</h1>
+            </div>
+        </div>
+
 
     </section>
 </template>
 
 <style lang="scss" scoped>
+@use '../temp/partials/mixins.scss' as *;
+@use '../temp/partials/variables.scss' as *;
+
+.main {
+    .container {
+        .title {
+            position: relative;
+            left: 0;
+            top: -30px;
+        }
+
+        h1 {
+            position: absolute;
+            border: 5px solid $secondary;
+            color: white;
+            width: 250px;
+            padding: 10px;
+            text-align: center;
+            background-color: $secondary;
+        }
+    }
+
+    .d-flex {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .button-load {
+        cursor: pointer;
+        text-align: center;
+        padding: 20px;
+        width: 300px;
+        background-color: $secondary;
+    }
+}
+
 .cards {
     display: flex;
     flex-wrap: wrap;
     margin-inline: -15px;
     color: white;
+    padding: 30px 0;
 }
 </style>
