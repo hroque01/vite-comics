@@ -31,7 +31,6 @@ export default {
 @use './temp/general.scss' as *;
 
 main {
-  height: 200px;
   background: black;
 
 

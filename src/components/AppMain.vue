@@ -88,10 +88,20 @@ export default {
 
 <template>
     <section>
-        <AppCard v-for="(product, index) in cards" :key="index" :thumb="product" />
+        <div class="container">
+            <div class="cards">
+                <AppCard v-for="(product, index) in cards" :key="index" :thumb="product" />
+            </div>
+        </div>
+
     </section>
 </template>
 
 <style lang="scss" scoped>
-
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: -15px;
+    color: white;
+}
 </style>
