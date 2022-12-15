@@ -3,11 +3,13 @@ import AppHeader from './components/AppHeader.vue';
 import BlueSection from './components/BluSection.vue'
 import AppLinks from './components/AppLinks.vue'
 import AppFooter from './components/AppFooter.vue'
+import AppMain from './components/AppMain.vue'
 
 export default {
   components: {
     AppHeader,
     BlueSection,
+    AppMain,
     AppLinks,
     AppFooter
   }
@@ -17,7 +19,7 @@ export default {
 <template>
   <AppHeader />
   <main>
-    <h1> --> content goes here </h1>
+    <AppMain />
   </main>
   <BlueSection />
   <AppLinks />
